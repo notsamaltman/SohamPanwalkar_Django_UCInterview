@@ -1,0 +1,33 @@
+body 
+{
+margin: 0;
+height: 100vh;
+background-color: #0B0C10; /* Aurora black */
+display: flex;
+justify-content: flex-start;
+align-items: center;
+font-family: "Inter", sans-serif;
+flex-direction: column;
+border: 0px;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.footer{
+  height: 1.6rem;
+  width: 100vw;
+  background-color: #9060ff54;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-text{
+  position: fixed;
+  left: 8px;
+  font-size: 0.6rem;
+}

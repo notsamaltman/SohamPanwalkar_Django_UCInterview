@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 import requests
 
 def search_page(request):
@@ -10,6 +10,10 @@ def get_search(request, searchtag):
         return JsonResponse(get_data(searchtag))
     else:
         return JsonResponse({'error': 'No search tag provided'}, status=400)
+    
+def info_page(request, drinkName):
+    print(drinkName)
+    return render(request, 'taskapp/info.html')
 
 def get_data(search):
     typesrch = 's='

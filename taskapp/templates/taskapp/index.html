@@ -13,7 +13,12 @@
     </head>
     <body>
         <div class="navbar">
+            <div class="most-searched-container">
+                <p style="font-size: 0.8rem; margin: 3px;">Check out our most searched cocktails!</p>
+                <button onclick="openMostSearched()">most searched!</button>
+            </div>
             <h2>your one stop shop for all things Cocktail!</h2>
+            <button class="exit-button" onclick="removeNavbar()"><img src="{% static "taskapp/images/cross.png" %}" alt="" class="exit-img"></button>
         </div>
         <div class="logo-container">
             <img src="{% static "taskapp/images/logo.png" %}" alt="">
@@ -24,6 +29,10 @@
                 <button class="search-button">Search</button>
             </div>
             <div class="results-container"></div>
+        </div>
+        <div class="footer">
+            <p class="foot-text">@SE2025</p>
+            <h6>created by SohamPanwalkar for Unicode</h6>
         </div>
         <script src="{% static "taskapp/script.js" %}"></script>
     </body>

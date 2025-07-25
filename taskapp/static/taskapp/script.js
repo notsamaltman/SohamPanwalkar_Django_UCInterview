@@ -10,7 +10,7 @@ searchinput.addEventListener('input', (e) => {
     if (text !== '') {
         debounceTimer = setTimeout(() => {
             get_search(text);
-        }, 2000);
+        }, 300);
     } else {
         resultsContainer.innerHTML = ''; // clear if input is empty
     }
@@ -19,7 +19,9 @@ searchinput.addEventListener('input', (e) => {
 async function get_search(search) {
     try {
         let response = await fetch('/search/' + search + '/');
-        if (!response.ok) throw new Error("HTTP error " + response.status);
+        if (!response.ok) 
+            {   resultsContainer.innerHTML = '<div class="result-item">No results found.</div>';
+                throw new Error("HTTP error " + response.status);}
 
         let info = await response.json();
         info = info.drinks;
@@ -48,10 +50,16 @@ function render_results(results) {
         `;
 
         resultDiv.addEventListener('click', () => {
-            alert(`You selected: ${item.drinkname}`);
+            window.location.href = 'home/'+item.drinkname+'/'
         });
 
         resultsContainer.appendChild(resultDiv);
     });
+}
+
+const navBar = document.querySelector('.navbar');
+function removeNavbar()
+{
+   navBar.classList.add('hidden');
 }
 

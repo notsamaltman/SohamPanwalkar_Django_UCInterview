@@ -7,7 +7,13 @@ body {
       align-items: center;
       font-family: "Inter", sans-serif;
       flex-direction: column;
+      border: 0px;
+
     }
+
+.hidden{
+  display: none !important;
+}
 
 .logo-container{
     padding: 3rem;
@@ -23,6 +29,21 @@ body {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+.exit-button{
+  justify-self: flex-end;
+  color: transparent !important;
+  background: transparent !important; 
+  position: fixed;
+  top: 12px;
+  right: 15px;
+}
+
+.exit-img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
 }
 
 .search-container {
@@ -101,4 +122,34 @@ body {
   object-fit: cover;
   border-radius: 4px;
   margin-right: 12px;
+}
+.footer{
+  height: 1.6rem;
+  width: 100vw;
+  background-color: #9060ff54;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.foot-text{
+  position: fixed;
+  left: 8px;
+  font-size: 0.6rem;
+}
+
+.most-searched-container{
+  height: 3.9rem;
+  color: white;
+  position: fixed;
+  left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  flex-direction: column;
+  font-size: 0.65rem;
+  background: transparent;
 }
