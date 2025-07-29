@@ -12,11 +12,34 @@
     <title>CocktailCompass</title>
 </head>
 <body>
-
-
-    <div class="footer">
-            <p class="foot-text">@SE2025</p>
-            <h6>created by SohamPanwalkar for Unicode</h6>
+    <div class="header">
+        <img src="{% static "taskapp/images/logo.png" %}" alt="" class="title-logo">
+        <h1>CocktailCompass</h1>
     </div>
+    <div class="write-area">
+        <div class="image-area">
+            <img src="{{drink.drinkimg}}" alt="Cocktail Photo" class="info-img">
+        </div>
+        <div class="image-text">
+            <h1 class="cocktail-name">{{drink.drinkname}}</h1>
+            <h4 id="cocktail-category">{{drink.drinktypes}}</h4>
+        </div>
+    </div>
+    <div class="instructions">
+        <h1>Instructions:</h1>
+        <ul>
+            {%for instruction in drink.drinkinstruction%}
+                <li>{{instruction}}</li>
+            {% empty %}
+                <li>no record of instruction found!</li>
+            {% endfor %}
+        </ul>
+        <h4>No of searches🔍: {{drink.searches}}</h4>
+    </div>
+    <div class="footer">
+        <p class="foot-text">@SE2025</p>
+        <h6>created by SohamPanwalkar for Unicode</h6>
+    </div>
+    <script src="{% static "taskapp/infoscript.js" %}"></script>
 </body>
 </html>

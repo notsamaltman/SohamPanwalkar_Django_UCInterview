@@ -1,0 +1,100 @@
+body 
+{
+margin: 0;
+border: 0;
+padding: 0;
+height: 100vh;
+background-color: #0B0C10; /* Aurora black */
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Inter", sans-serif;
+flex-direction: column;
+border: 0px;
+}
+
+button {
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+.hidden{
+  display: none !important;
+}
+
+.divs-area{
+  width: 65vw;
+  height: 85vh;
+  border: 2px white;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  overflow-y:auto;
+}
+
+.topdivs{
+  width: 60vw;
+  height: 7vh;
+  background-color: rgb(15, 19, 29);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8px;
+  border-radius: 6px;
+}
+
+.topdivs:hover{
+  color: rgb(161, 121, 255);
+  border: 2px solid rgb(161, 121, 255);
+}
+
+.profile-img{
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  padding-left: 15px;
+}
+
+.footer{
+  height: 1.6rem;
+  width: 100vw;
+  background-color: #9060ff54;
+  color: white;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.foot-text{
+  position: fixed;
+  left: 8px;
+  font-size: 0.6rem;
+}
+
+.title-logo{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.header{
+  height: 3vw;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  background-color: #523791dc;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

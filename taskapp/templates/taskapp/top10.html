@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "taskapp/top10style.css" %}">
+    <link rel="shortcut icon" href="{% static "taskapp/images/favicon.ico" %}" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>CocktailCompass</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Most searched Cocktails!</h1>
+    </div>
+
+    <div class="divs-area">
+        {%for drink in drinks%}
+        <button onclick="loadinfopage(this)" id="{{drink.name}}">
+        <div class="topdivs">
+            <img src="{{drink.image}}" alt="" class="profile-img">
+            <h3>{{drink.name}}</h3>
+            <h3 style="padding: 8px;">🔍{{drink.searches}}</h3>
+        </div>
+        </button>
+        {% endfor %}
+    </div>
+
+    <div class="footer">
+        <p class="foot-text">@SE2025</p>
+        <h6>created by SohamPanwalkar for Unicode</h6>
+    </div>
+    <script src="{% static "taskapp/top10script.js" %}"></script>
+</body>
+</html>

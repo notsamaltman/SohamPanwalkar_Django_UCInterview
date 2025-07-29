@@ -63,3 +63,7 @@ function removeNavbar()
    navBar.classList.add('hidden');
 }
 
+function openMostSearched()
+{
+    window.location.href = 'mostsearched/';
+}

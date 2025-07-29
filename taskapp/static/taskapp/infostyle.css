@@ -25,9 +25,63 @@ border: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 .foot-text{
   position: fixed;
   left: 8px;
   font-size: 0.6rem;
+}
+
+.write-area{
+  width: 38vw;
+  height: 20vw;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  position: relative;
+  top: 4vw;
+}
+.info-img{
+  width: 18vw;
+  height: 13vw;
+  object-fit: cover;
+  padding: 1.5rem;
+}
+.image-text{
+  height: 13vw;
+  width: 18vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+.header{
+  height: 3vw;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  background-color: #523791dc;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.title-logo{
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.instructions{
+  color: white;
+  align-self: center;
+  width: 45vw;
+}
+
+li{
+  font-size: 1.35rem;
+  overflow-wrap: break-word;
+  padding: 0.16rem;
 }
